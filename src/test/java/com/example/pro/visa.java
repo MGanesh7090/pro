@@ -4,8 +4,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class flights {
+public class visa {
 
-    @GetMapping("/flights")
-    public String getData() {return  "indigo flights are safe" ; }
+    @GetMapping("/visa")
+    public String getData() {return  "Please Book Visa For Dubai at 7000 Rs, Thank you" ; }
 }

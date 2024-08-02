@@ -4,8 +4,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class flights {
+public class USAairlines {
 
-    @GetMapping("/flights")
-    public String getData() {return  "indigo flights are safe" ; }
+    @GetMapping("/USAairlines")
+    public String getData() {return "United states airways" ; }
 }
