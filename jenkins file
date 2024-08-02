@@ -1,0 +1,35 @@
+pipeline {
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
+    }
+
+    tools {
+        maven 'maven_3.9.4'
+    }
+
+    stages {
+        stage('Check Java Version') {
+            steps {
+                echo 'Checking Java version'
+                sh 'java --version'
+                echo 'Yes, you have Java 17!'
+            }
+        }
+
+        stage('Check Maven Version') {
+            steps {
+                echo 'Checking Maven version'
+                sh 'mvn --version'
+                echo 'Yes, you have Maven 3.9.4!'
+            }
+        }
+
+        stage('Check Git Version') {
+            steps {
+                echo 'Checking Git version'
+                sh 'git --version'
+                echo 'Git version checked successfully!'
+            }
+        }
+    }
+}
